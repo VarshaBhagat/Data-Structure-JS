@@ -1,5 +1,5 @@
 // import Counter from "./mini-project/Counter";
-import ImageGallery from "./mini-project/Image-gallery/index"
+import Accordion from "./mini-project/Accordion/index"
 import "./App.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <Counter /> */}
       {/* <StarComponent length={5}></StarComponent> */}
-      <ImageGallery />
+      <Accordion />
     </>
   );
 }
