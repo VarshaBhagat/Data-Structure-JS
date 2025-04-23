@@ -1,5 +1,5 @@
 // import Counter from "./mini-project/Counter";
-import TrafficLight from "./mini-project/traffic-lights/index"
+import TelephoneFormatter from "./mini-project/TelephoneFormatter/index"
 import "./App.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <Counter /> */}
       {/* <StarComponent length={5}></StarComponent> */}
-      <TrafficLight />
+      <TelephoneFormatter />
     </>
   );
 }
