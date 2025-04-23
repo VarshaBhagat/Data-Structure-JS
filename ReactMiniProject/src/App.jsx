@@ -1,5 +1,5 @@
 // import Counter from "./mini-project/Counter";
-import TelephoneFormatter from "./mini-project/TelephoneFormatter/controlledInput"
+import  StringTransformers from "./mini-project/StringTransformers"
 import "./App.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <Counter /> */}
       {/* <StarComponent length={5}></StarComponent> */}
-      <TelephoneFormatter />
+      <StringTransformers />
     </>
   );
 }
