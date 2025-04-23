@@ -1,5 +1,5 @@
 // import Counter from "./mini-project/Counter";
-import TelephoneFormatter from "./mini-project/TelephoneFormatter/index"
+import TelephoneFormatter from "./mini-project/TelephoneFormatter/controlledInput"
 import "./App.css";
 
 function App() {

@@ -11,7 +11,6 @@ const TelephoneFormatter = () => {
 
   const onChange = (e) => {
     let str = filterNumber(e.target.value);
-    console.log(str.length, "+(" + str.substring(0, 3) + ") - " + str.substring(3))
     setPhone(
       str.length > 3
         ? "+(" + str.substring(0, 3) + ") - " + str.substring(3)
