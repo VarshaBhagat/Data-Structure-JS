@@ -1,5 +1,5 @@
 // import Counter from "./mini-project/Counter";
-import Accordion from "./mini-project/Accordion/index"
+import TrafficLight from "./mini-project/traffic-lights/index"
 import "./App.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <Counter /> */}
       {/* <StarComponent length={5}></StarComponent> */}
-      <Accordion />
+      <TrafficLight />
     </>
   );
 }
