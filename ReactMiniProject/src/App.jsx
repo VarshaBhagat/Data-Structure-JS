@@ -1,10 +1,10 @@
 // import Counter from "./mini-project/Counter";
 import StringTransformers from "./mini-project/StringTransformers";
 import "./App.css";
-import Stepper from "./mini-project/Stepper";
+import ToastPopup from "./mini-project/ToastPopup";
 
 function App() {
-  return <Stepper></Stepper>;
+  return <ToastPopup></ToastPopup>;
 }
 
 export default App;
