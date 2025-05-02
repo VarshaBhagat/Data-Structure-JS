@@ -41,7 +41,7 @@
   color: #888;
 }
  */
- #root {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -62,4 +62,14 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+
+/* stepper css */
+.active {
+  background-color: rgb(71, 71, 247) !important;
+  color: white;
+}
+.done {
+  background-color: rgb(30, 196, 30) !important;
+  color: white;
 }
