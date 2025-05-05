@@ -1,0 +1,15 @@
+.input {
+  height: 30px;
+  width: 200px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.column {
+  flex-direction: column;
+}
+#list-container {
+    width: 200px;
+}
