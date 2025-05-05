@@ -2,10 +2,10 @@ import React, { useCallback, useMemo, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-display: flex
-;
-    flex-direction: column;
-    align-items: center;`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 const Input = styled.input`
   width: 700px;
   height: 35px;
@@ -43,7 +43,7 @@ const ListContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-      width: 700px;
+  width: 700px;
 `;
 
 const TodoList = () => {
@@ -53,15 +53,20 @@ const TodoList = () => {
   const [indexVal, setIndex] = useState<number>(0);
   let isDisable = useMemo(() => val.length == 0, [val]);
 
-  const onDelete = useCallback(( index: number) =>{
-    
-    setList(list.filter((item, i)=>i!=index))
-  },[list])
-  const onEdit = useCallback(( index: number) =>{
-    setVal(list.filter((item, i)=>i==index)[0])
-    setIndex(index)
-    setShowUpdateBtn(true)
-  },[list])
+  const onDelete = useCallback(
+    (index: number) => {
+      setList(list.filter((item, i) => i != index));
+    },
+    [list]
+  );
+  const onEdit = useCallback(
+    (index: number) => {
+      setVal(list.filter((item, i) => i == index)[0]);
+      setIndex(index);
+      setShowUpdateBtn(true);
+    },
+    [list]
+  );
   return (
     <Container>
       <h1>TodoList</h1>
@@ -72,33 +77,28 @@ const TodoList = () => {
         onChange={(e) => setVal(e.target.value)}
       ></Input>
       <div>
-        {
-
-isShowUpdateBtn?(
-<Button
-  onClick={() => {
-    list[indexVal]=val
-    setList(list)
-    setVal("");
-    setShowUpdateBtn(false)
-  }}
->
-  Update
-</Button>
-)
-:
-(<Button
-  onClick={() => {
-    setList([...list, val]);
-    setVal("");
-  }}
-  disabled={isDisable}
->
-  Submit
-</Button>)
-
-
-        }
+        {isShowUpdateBtn ? (
+          <Button
+            onClick={() => {
+              list[indexVal] = val;
+              setList(list);
+              setVal("");
+              setShowUpdateBtn(false);
+            }}
+          >
+            Update
+          </Button>
+        ) : (
+          <Button
+            onClick={() => {
+              setList([...list, val]);
+              setVal("");
+            }}
+            disabled={isDisable}
+          >
+            Submit
+          </Button>
+        )}
         <Button
           onClick={() => {
             setVal("");
@@ -112,10 +112,12 @@ isShowUpdateBtn?(
       {list.map((item, index) => {
         return (
           <ListContent key={index}>
-            <p >{item}</p>
+            <p>{item}</p>
             <div>
-              <EditButton onClick={()=>onEdit(index)}>Edit</EditButton>
-              <DeleteButton onClick={()=>onDelete(index)}>Delete</DeleteButton>
+              <EditButton onClick={() => onEdit(index)}>Edit</EditButton>
+              <DeleteButton onClick={() => onDelete(index)}>
+                Delete
+              </DeleteButton>
             </div>
           </ListContent>
         );
