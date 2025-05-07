@@ -2,10 +2,10 @@
 import StringTransformers from "./mini-project/StringTransformers";
 import "./App.css";
 import ToastPopup from "./mini-project/ToastPopup";
-import TodoList from "./mini-project/TodoList";
+import Chips from "./mini-project/Chips";
 
 function App() {
-  return <TodoList></TodoList>
+  return <Chips></Chips>
 }
 
 export default App;

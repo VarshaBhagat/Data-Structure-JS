@@ -16,7 +16,7 @@ const Input = styled.input`
 const ChipContainer = styled.div`
   display: flex;
   gap: 20px;
-      margin-top: 20px;
+  margin-top: 20px;
 `;
 
 const Chip = styled.div`
@@ -27,21 +27,21 @@ const Chip = styled.div`
 `;
 
 const Button = styled.button`
-    outline: 0;
-    border: 0;
-    color: red;
-`
+  outline: 0;
+  border: 0;
+  color: red;
+`;
 
 const Chips = () => {
   const [value, setValue] = useState("");
   const [list, setList] = useState<string[]>([]);
   const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
-    setValue("")
+    setValue("");
     setList((prev) => [...prev, value]);
     e.preventDefault();
   };
   const onClick = (index: number) => {
-    setList((list).filter((item, i)=>i!=index));
+    setList(list.filter((item, i) => i != index));
   };
   return (
     <Container>
@@ -51,17 +51,19 @@ const Chips = () => {
           type="text"
           placeholder="Type & hit Enter"
           value={value}
-          onInput={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e?.target?.value || "")}
+          onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setValue(e?.target?.value || "")
+          }
         ></Input>
       </form>
       <ChipContainer>
         {list.map((i, index) => {
-          return <Chip key={index}>
-            {i}
-            <Button onClick={()=>onClick(index)}>
-                &#x2715;
-              </Button>
-            </Chip>;
+          return (
+            <Chip key={index}>
+              {i}
+              <Button onClick={() => onClick(index)}>&#x2715;</Button>
+            </Chip>
+          );
         })}
       </ChipContainer>
     </Container>
